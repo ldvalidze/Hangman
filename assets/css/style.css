@@ -1,0 +1,29 @@
+body {
+    background-image: url("../images/hangman.jpg");
+}
+
+h1 {
+    color: rgba(238, 0, 0, 0.658);
+    font-size: 120px;
+    text-align: center;
+}
+
+#subHeader {
+    color:orange;
+    font-size: 30px;
+    text-align: center;
+}
+
+li {
+    font-size: 20px;
+    color:rgba(167, 4, 4, 0.822);
+    text-align: center;
+}
+
+#hiddenWord {
+    font-size: 50px;
+}
+
+#wrongGuesses {
+    font-size: 30px;
+}
