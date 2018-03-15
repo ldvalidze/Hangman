@@ -33,10 +33,18 @@ $(document).ready(function (){
             }
             else 
             {
-                wrongGuesses.push(userGuess);
-                guessesLeft--;
-                document.getElementById("wrongGuesses").textContent = wrongGuesses;
-                document.getElementById("guessesRemeiningNumber").textContent = guessesLeft;
+                for (var i = 0; i < 12; i++)
+                {
+                    if (wrongGuesses.indexOf(userGuess) === -1)
+                    {
+                        wrongGuesses.push(userGuess);
+                        guessesLeft--;
+                        document.getElementById("wrongGuesses").textContent = wrongGuesses;
+                        document.getElementById("guessesRemeiningNumber").textContent = guessesLeft;
+                    }
+                }
+
+                
             }
         } 
         
@@ -49,13 +57,6 @@ $(document).ready(function (){
         }
     }
 
-    
-        
-        
-    
-
-
-
 startGame();
 })
 
@@ -63,40 +64,3 @@ startGame();
 
 
 
-    //get user input onkeyup.
-    
-    // for (var i=0; i <word.length; i++) {
-    // document.onkeyup = function(event) {
-        
-    //     wrongGuesses.push(userGuess[i]);
-    // }
-    
-    // //if guess is wrong, display letter in the wrong guesses
-    // if (word.indexOf(userGuess) === -1) {
-    //     var wrongGuesses = [];
-    //     for (var i = 0; i < numGuesses; i++) {
-    //     wrongGuesses.push(userGuess[i]);
-    //     }
-    //     console.log('letter aint there');
-    //     console.log('Wrong Guesses :' + wrongGuesses)
-    // }
-    
-    
-    
-    // //if guess is right, show the letter instead of dash
-    // else {
-    //     console.log('letter is there');
-    //     //if guess is same as before, nothing happens
-    
-    // }
-    
-    
-    
-    // //define right/wrong guesses
-    
-    // };
-    
-    
-    // //define wins & keep track of wins
-    
-    // });

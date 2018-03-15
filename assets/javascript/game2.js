@@ -33,18 +33,10 @@ $(document).ready(function (){
             }
             else 
             {
-                for (var i = 0; i < 12; i++)
-                {
-                    if (wrongGuesses.indexOf(userGuess) === -1)
-                    {
-                        wrongGuesses.push(userGuess);
-                        guessesLeft--;
-                        document.getElementById("wrongGuesses").textContent = wrongGuesses;
-                        document.getElementById("guessesRemeiningNumber").textContent = guessesLeft;
-                    }
-                }
-
-                
+                wrongGuesses.push(userGuess);
+                guessesLeft--;
+                document.getElementById("wrongGuesses").textContent = wrongGuesses;
+                document.getElementById("guessesRemeiningNumber").textContent = guessesLeft;
             }
         } 
         
@@ -56,6 +48,13 @@ $(document).ready(function (){
             }
         }
     }
+
+    
+        
+        
+    
+
+
 
 startGame();
 })
